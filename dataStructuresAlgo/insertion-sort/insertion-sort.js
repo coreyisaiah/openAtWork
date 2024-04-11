@@ -17,8 +17,29 @@ function insertionSort(arr) {
   - Insert the unsorted value at the break point
   Return the sorted array
   */
+  let copy = arr.slice()
+  let sorted = []
 
-  // Your code here
+  let nti = copy.shift()
+  sorted.unshift(nti)
+
+  for(let i = 0; i < (arr.length-1); i++){
+    nti = copy.shift()
+
+    if (!sorted.length){
+      sorted.unshift(nti)
+    } 
+    
+    if(sorted.length){
+      if(nti > sorted[i]){
+        sorted.push(nti)
+      } else {
+        sorted.unshift(nti)
+      }
+    }
+
+}
+return sorted
 }
 
 // In-place Insertion Sort
