@@ -1,34 +1,25 @@
-// function addNums(n){
-
-
-//   product = 1
-//   for(let i = 0; i < n; i++){
-//     product *= i
-//   }
-//   return product
-// }
-
-// console.time("addNums")
-// addNums(999999999)
-// console.timeEnd("addNums")
-
-function binarySearch(arr, target) {
-  let low = 0
-  let high = arr.length - 1
-
-  while (low <= high) {
-    let mid = Math.floor((low + high) / 2)
-    if (target === arr[mid]) {
-      return mid
-    }
-    if (target < arr[mid]) {
-      high = mid - 1
-    } else {
-      low = mid + 1
-    }
-  }
-  return `The number '${target}' doesn't live here buckaroo :(`
+const adjList = {
+  "a": [2, 5],
+  'b': [ 3, 5],
+  'c': [2, 4],
+  'd': [3, 5, 6],
+  'e': [ 2, 4],
+  'f': [4]
 }
-  arr = [-10, -4, -1, 2, 8, 10, 11, 19];
 
-  console.log(binarySearch(arr, 17))
+function printDepthFirst(obj, start) {
+  const stack = [start];
+  
+  while(stack.length){
+      let curr = stack.pop();
+      console.log(curr);
+
+      for(let neighbor of obj[curr]){
+          stack.push(neighbor);
+      }
+  }
+};
+
+console.log("First Test:")
+printDepthFirst(adjList, 'b'); // Prints 1 through 6 in Depth-first order, starting with 3
+                     // One possible solution:  3, 4, 6, 5, 1, 2
