@@ -59,15 +59,15 @@ function findMaxEachLevel(root) {
 
 // Uncomment the code below for local testing.
 
-// // Build a tree for testing
+// Build a tree for testing
 
-//   const simpleTree = new TreeNode(4, null, null);
-//   simpleTree.right = new TreeNode(1, null, null);
-//   simpleTree.left = new TreeNode(3, null, null);
-//   simpleTree.right.right = new TreeNode(2, null, null);
+  const simpleTree = new TreeNode(4, null, null);
+  simpleTree.right = new TreeNode(1, null, null);
+  simpleTree.left = new TreeNode(3, null, null);
+  simpleTree.right.right = new TreeNode(2, null, null);
 
-// // Test the function with the debug tree
-// console.log(findMaxEachLevel(simpleTree)); // -> [ 4, 3, 2 ]
+// Test the function with the debug tree
+console.log(findMaxEachLevel(simpleTree)); // -> [ 4, 3, 2 ]
 
 /*******************************************************************************
  * Do not change the code after this line.
