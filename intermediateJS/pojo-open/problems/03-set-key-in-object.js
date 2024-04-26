@@ -14,7 +14,7 @@ setKeyInObject(obj1, "num", 3); // => {str: "hello", num: 3}
 ***********************************************************************/
 
 function setKeyInObject(obj, string, value) {
-  obj[string] = valuesInObject
+  obj[string] = value
   return obj
 }
 
