@@ -47,9 +47,30 @@ function findStarts(matrix) {
 
 function findNeighbors(node, matrix) {
     // Don't forget to include diagonal neighbors!!!
-
-    // Your code here 
-}
+    let [row, col] = node
+    const neighbors = [];
+    
+   // Check top neighbors
+  if (row > 0) {
+    if (col > 0) neighbors.push([row - 1, col - 1]);
+    neighbors.push([row - 1, col]);
+    if (col < matrix[0].length - 1) neighbors.push([row - 1, col + 1]);
+  }
+  
+  // Check middle neighbors
+  if (col > 0) neighbors.push([row, col - 1]);
+  if (col < matrix[0].length - 1) neighbors.push([row, col + 1]);
+  
+  // Check bottom neighbors
+  if (row < matrix.length - 1) {
+    if (col > 0) neighbors.push([row + 1, col - 1]);
+    neighbors.push([row + 1, col]);
+    if (col < matrix[0].length - 1) neighbors.push([row + 1, col + 1]);
+  }
+  
+  // Filter neighbors with elevation difference of 1
+  return neighbors.filter(([nRow, nCol]) => Math.abs(matrix[nRow][nCol] - matrix[row][col]) === 1);
+      }
 
 function pathTraversal(node, matrix, visited, peak) {
     // Your code here 
