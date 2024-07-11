@@ -1,16 +1,20 @@
 {
-  "name": "dynamic-array-practice",
+  "name": "class-syntax-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "array.js",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "mocha"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.3.4",
     "chai-spies": "^1.0.0",
-    "mocha": "^8.3.2"
+    "mocha": "^9.0.0"
   }
 }

@@ -1,7 +1,5 @@
 function linearSearch (arr, target) {
-
-  // Can you solve this in one line?
-
+  return arr.indexOf(target)
 };
   // Set integers pointing to the high and low range of possible indices
 

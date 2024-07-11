@@ -7,13 +7,11 @@ JavaScript array methods. You cannot use [unshift][mdn-unshift] to implement you
 
 ## Instructions
 
-1. Clone the [starter] repo
-2. Install all packages by typing `npm install`
-3. Read through the test specs to understand the task
-4. Run specs with `npm test`
-5. Implement the DynamicArray constructor, `read` and `unshift` methods until
-   tests are green
+1. Download the starter using the link below.
+2. Run `npm install` to install all dependencies.
+4. Run `npm test` to run specs.
+5. Implement the `DynamicArray` constructor, `read` and `unshift` methods until all specs
+   are passing.
 
 
 [mdn-unshift]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
-[starter]: https://github.com/appacademy-starters/practice-dynamic-array
