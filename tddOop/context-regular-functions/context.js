@@ -14,13 +14,17 @@ class Fish {
 
 const nemo = new Fish('Nemo');
 
+//console.log(nemo)
+
 /********************************* Scenario 1 *********************************/
-//eat(); // "undefined eats fish food" (I was right!)
+//eat(); // "undefined eats fish food" 
+//(I was right!...the context is the global obj there's no name on the global obj)
 
 
 /********************************* Scenario 2 *********************************/
-// nemo.eat = eat;
-// nemo.eat(); // Nemo eats fish food (I was right again!)
+// nemo.eat = eat;          //is this a binding???
+// nemo.eat(); 
+// // Nemo eats fish food (I was right again! ?because the context is within the nemo object?)
 
 
 /********************************* Scenario 3 *********************************/
@@ -29,9 +33,10 @@ const nemo = new Fish('Nemo');
 
 
 /********************************* Scenario 4 *********************************/
-// nemo.swim(); // Nemo swimming in the water
+//nemo.swim(); // Nemo swimming in the water 
+//swim is by default one of nemo's methods
 
 
 /********************************* Scenario 5 *********************************/
 // const swim = nemo.swim;
-// swim(); // Error swim is not a function (TypeError: this is undefined)
+// swim(); // error because the context isn't explicity
